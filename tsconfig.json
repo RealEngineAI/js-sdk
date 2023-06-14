@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "target": "es2019",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    // Overrides default in order to remove "dom" because this package shouldn't assume the presence of browser APIs
+    "lib": ["ES2019"],
+    // Emit location
+    "outDir": "build",
+    // Emit sourcemaps
+    "declarationMap": true,
+    "sourceMap": true,
+    "inlineSources": true,
+    // Emit type definitions
+    "declaration": true,
+    // Strict mode
+    "strict": true,
+    // Allow import package.json
+    "resolveJsonModule": true,
+    // Linter style rules
+    "noUnusedLocals": false,
+    // Disabled because we use eslint for this.
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*", "test/**/*"]
+}
