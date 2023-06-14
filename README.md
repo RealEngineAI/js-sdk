@@ -10,7 +10,7 @@ npm install @realengineai/client
 
 ## Usage
 
-Import and initialize a client using an **API token** from the [RealEngine AI Dashboard](https://app.realengine.ai)..
+Import and initialize a client using an **API token** from the [RealEngine AI Dashboard](https://app.realengine.ai).
 
 ```js
 const { Client } = require("@realengineai/client")
