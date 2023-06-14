@@ -19,7 +19,7 @@
     "image-to-text"
   ],
   "main": "./build/src",
-  "types": "./build/src/index.d.ts",
+  "types": "./build/src/client.d.ts",
   "scripts": {
     "prepare": "npm run build",
     "prepublishOnly": "npm run lint && npm run test",
