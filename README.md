@@ -1,6 +1,6 @@
-# RealEgnine.ai SDK for JavaScript</h1>
+# RealEngine.ai SDK for JavaScript</h1>
 
-A simple and easy to use client for the <a href="https://www.realengine.ai">RealEgnine.ai API</a></b>
+A simple and easy to use client for the <a href="https://www.realengine.ai">RealEngine.ai API</a></b>
 
 ## Installation
 
