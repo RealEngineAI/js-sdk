@@ -1,6 +1,6 @@
 {
   "name": "@realengineai/client",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A simple and easy to use client for the RealEngine.ai API",
   "engines": {
     "node": ">=18"
@@ -18,7 +18,7 @@
     "rest",
     "image-to-text"
   ],
-  "main": "./build/src",
+  "main": "./build/src/client.js",
   "types": "./build/src/client.d.ts",
   "scripts": {
     "prepare": "npm run build",
