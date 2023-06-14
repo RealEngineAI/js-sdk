@@ -41,10 +41,14 @@ describe("RealEngineAIClient", () => {
       "http://example.com/testImage"
     )
 
-    // expect(fetchMock.mock.calls.length).toEqual(1);
+    expect(fetchMock.mock.calls.length).toEqual(1)
     expect(actualCaption).toEqual("This is a test caption")
-    // expect(fetchMock.mock.calls[0][0]).toEqual('/test-base-url/caption?url=http%3A%2F%2Fexample.com%2FtestImage');
-    // expect(fetchMock.mock.calls[0][1].headers.Authorization).toEqual('Bearer test-token');
+    expect(fetchMock.mock.calls[0]![0]).toEqual(
+      "http://example.com/test/caption?url=http%3A%2F%2Fexample.com%2FtestImage"
+    )
+    expect(fetchMock.mock.calls[0]![1].headers.Authorization).toEqual(
+      "Bearer test-token"
+    )
   })
 
   it("getCaptionFailureTest", async () => {
@@ -82,12 +86,20 @@ describe("RealEngineAIClient", () => {
       "http://example.com/testImage"
     )
 
-    // expect(fetchMock.mock.calls.length).toEqual(2);
+    expect(fetchMock.mock.calls.length).toEqual(2)
     expect(actualCaption).toEqual("This is a test caption")
-    // expect(fetchMock.mock.calls[0][0]).toEqual('/test-base-url/caption?url=http%3A%2F%2Fexample.com%2FtestImage');
-    // expect(fetchMock.mock.calls[0][1].headers.Authorization).toEqual('Bearer test-token');
-    // expect(fetchMock.mock.calls[1][0]).toEqual('/test-base-url/caption?url=http%3A%2F%2Fexample.com%2FtestImage');
-    // expect(fetchMock.mock.calls[1][1].headers.Authorization).toEqual('Bearer test-token');
+    expect(fetchMock.mock.calls[0]![0]).toEqual(
+      "http://example.com/test/caption?url=http%3A%2F%2Fexample.com%2FtestImage"
+    )
+    expect(fetchMock.mock.calls[0]![1].headers.Authorization).toEqual(
+      "Bearer test-token"
+    )
+    expect(fetchMock.mock.calls[1]![0]).toEqual(
+      "http://example.com/test/caption?url=http%3A%2F%2Fexample.com%2FtestImage"
+    )
+    expect(fetchMock.mock.calls[1]![1].headers.Authorization).toEqual(
+      "Bearer test-token"
+    )
   })
 
   it("getCaptionNotReady", async () => {
@@ -122,13 +134,25 @@ describe("RealEngineAIClient", () => {
       "http://example.com/testImage"
     )
 
-    // expect(fetchMock.mock.calls.length).toEqual(3);
+    expect(fetchMock.mock.calls.length).toEqual(3)
     expect(actualCaption).toEqual("This is a test caption")
-    // expect(fetchMock.mock.calls[0][0]).toEqual('/test-base-url/caption?url=http%3A%2F%2Fexample.com%2FtestImage');
-    // expect(fetchMock.mock.calls[0][1].headers.Authorization).toEqual('Bearer test-token');
-    // expect(fetchMock.mock.calls[1][0]).toEqual('/test-base-url/task?id=test-task-id');
-    // expect(fetchMock.mock.calls[1][1].headers.Authorization).toEqual('Bearer test-token');
-    // expect(fetchMock.mock.calls[2][0]).toEqual('/test-base-url/task?id=test-task-id');
-    // expect(fetchMock.mock.calls[2][1].headers.Authorization).toEqual('Bearer test-token');
+    expect(fetchMock.mock.calls[0]![0]).toEqual(
+      "http://example.com/test/caption?url=http%3A%2F%2Fexample.com%2FtestImage"
+    )
+    expect(fetchMock.mock.calls[0]![1].headers.Authorization).toEqual(
+      "Bearer test-token"
+    )
+    expect(fetchMock.mock.calls[1]![0]).toEqual(
+      "http://example.com/test/task?id=test-task-id"
+    )
+    expect(fetchMock.mock.calls[1]![1].headers.Authorization).toEqual(
+      "Bearer test-token"
+    )
+    expect(fetchMock.mock.calls[2]![0]).toEqual(
+      "http://example.com/test/task?id=test-task-id"
+    )
+    expect(fetchMock.mock.calls[2]![1].headers.Authorization).toEqual(
+      "Bearer test-token"
+    )
   })
 })
