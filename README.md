@@ -13,12 +13,10 @@ npm install @realengineai/client
 Import and initialize a client using an **API token** from the [RealEngine AI Dashboard](https://app.realengine.ai).
 
 ```js
-const { Client } = require("@realengineai/client")
+import RealEngineAIClient from "@realengineai/client";
 
 // Initializing a client
-const realEngineAIClient = new RealEngineAIClient({
-  auth: process.env.REAL_ENGINE_AI_TOKEN,
-})
+const realEngineAIClient = new RealEngineAIClient(process.env.REAL_ENGINE_AI_TOKEN)
 ```
 
 Make a request to get captions for an image.
